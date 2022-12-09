@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329dca3bf78fcdd42b2df941673db76f, type: 3}
+  m_Name: BlendShape
+  m_EditorClassIdentifier: 
+  Clips:
+  - {fileID: 11400000, guid: 527ca38f930e49b47bd6ff7f11cf810d, type: 2}
+  - {fileID: 11400000, guid: e9cc1acc2f28f3342a40cbd9bc47e024, type: 2}
+  - {fileID: 11400000, guid: 5745f50e5dbacd44a84384af0a77c311, type: 2}
+  - {fileID: 11400000, guid: de3ac1f1d763f4a469a59d8a419e90f8, type: 2}
+  - {fileID: 11400000, guid: 91ceb585df7099d41a10fb57346cfc8f, type: 2}
+  - {fileID: 11400000, guid: 50cc80d6631f9a9429107c404cd56234, type: 2}
+  - {fileID: 11400000, guid: 35dd39163a238d747ad2803e64c4a139, type: 2}
+  - {fileID: 11400000, guid: 5476535fc2842dd44af197fe10dad56e, type: 2}
+  - {fileID: 11400000, guid: f1d75346568948340a543a71a7337829, type: 2}
+  - {fileID: 11400000, guid: 5e6fa9f44b1f8394180bf10a403f9376, type: 2}
+  - {fileID: 11400000, guid: 042885243a4a9ff4194dae6bfbb325c3, type: 2}
+  - {fileID: 11400000, guid: 67d21a6139428604e9c6f099e92f20eb, type: 2}
+  - {fileID: 11400000, guid: df66b2fa5960c864f927b4eb17f992c0, type: 2}
+  - {fileID: 11400000, guid: 797b855df992b7d42b9165001c5b741d, type: 2}
+  - {fileID: 11400000, guid: 9e7552d478242b645a1e4995ef2e3cf1, type: 2}
+  - {fileID: 11400000, guid: c3a6c764b4ce69949bf309ee48dfd4b9, type: 2}
+  - {fileID: 11400000, guid: 3037f0316a1fb234380df02382a26626, type: 2}
+  - {fileID: 11400000, guid: f3821f8c0c4208149b57c75c9975ac13, type: 2}

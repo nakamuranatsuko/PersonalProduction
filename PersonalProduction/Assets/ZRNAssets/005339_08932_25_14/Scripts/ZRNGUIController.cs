@@ -218,7 +218,7 @@ public class ZRNGUIController : MonoBehaviour {
 		GameObject[] targetAICars = GameObject.FindGameObjectsWithTag("AICars");
 		foreach (GameObject targetAICar in targetAICars)
 		{
-			targetAICar.GetComponent<AICarMove>().InitAICar();
+			//targetAICar.GetComponent<AICarMove>().InitAICar();
 			operateCameraNumber = 200;
 			this.GetComponent<CameraController>().ChangeCamera(operateCameraNumber);
 		}

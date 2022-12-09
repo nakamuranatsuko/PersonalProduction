@@ -12,8 +12,8 @@ public class FlyThroughController : MonoBehaviour {
 	const float ACCELERATE = 2.0f;
 	const float DECELERATE = 3.0f;
 	
-	QueryAnimationController.QueryChanAnimationType nowFlyingState;
-	QueryAnimationController.QueryChanAnimationType previousFlyingState;
+	//QueryAnimationController.QueryChanAnimationType nowFlyingState;
+	//QueryAnimationController.QueryChanAnimationType previousFlyingState;
 
 	[SerializeField]
 	GameObject groundCollider;
@@ -28,9 +28,9 @@ public class FlyThroughController : MonoBehaviour {
 	public void InitQuery () {
 
 		speed = 0.0f;
-		nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_IDLE;
-		previousFlyingState = nowFlyingState;
-		QueryObject.GetComponent<QueryAnimationController>().ChangeAnimation(QueryAnimationController.QueryChanAnimationType.FLY_IDLE);
+		//nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_IDLE;
+		//previousFlyingState = nowFlyingState;
+		//QueryObject.GetComponent<QueryAnimationController>().ChangeAnimation(QueryAnimationController.QueryChanAnimationType.FLY_IDLE);
 
 	}
 	
@@ -53,37 +53,37 @@ public class FlyThroughController : MonoBehaviour {
 			transform.Rotate(0, Input.GetAxis("Horizontal") * ROTATE_SPEED, 0);
 			if (Input.GetAxis("Horizontal") > 0)
 			{
-				nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_TORIGHT;
+				//nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_TORIGHT;
 			}
 			else if (Input.GetAxis("Horizontal") < 0)
 			{ 
-				nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_TOLEFT;
+				//nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_TOLEFT;
 			}
 		}
 		else
 		{
 			this.transform.localEulerAngles = new Vector3(0, this.transform.localEulerAngles.y, 0);
-			nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_STRAIGHT;
+			//nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_STRAIGHT;
 		}
 		
 		// Rotate Up or Down
-		if (Input.GetAxis("Vertical") != 0)
-		{
-			transform.Translate(Vector3.up * Input.GetAxis("Vertical") * ROTATE_SPEED *  Time.deltaTime);
-			if (Input.GetAxis("Vertical") > 0)
-			{
-				nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_UP;
-			}
-			else if (Input.GetAxis("Vertical") < 0)
-			{ 
-				nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_DOWN;
-			}
+		//if (Input.GetAxis("Vertical") != 0)
+		//{
+		//	transform.Translate(Vector3.up * Input.GetAxis("Vertical") * ROTATE_SPEED *  Time.deltaTime);
+		//	if (Input.GetAxis("Vertical") > 0)
+		//	{
+		//		nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_UP;
+		//	}
+		//	else if (Input.GetAxis("Vertical") < 0)
+		//	{ 
+		//		nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_DOWN;
+		//	}
 
-			if (this.transform.localPosition.y < groundCollider.transform.localPosition.y)
-			{
-				this.transform.localPosition = new Vector3 (this.transform.localPosition.x, groundCollider.transform.localPosition.y, this.transform.localPosition.z);
-			}
-		}
+		//	if (this.transform.localPosition.y < groundCollider.transform.localPosition.y)
+		//	{
+		//		this.transform.localPosition = new Vector3 (this.transform.localPosition.x, groundCollider.transform.localPosition.y, this.transform.localPosition.z);
+		//	}
+		//}
 		
 		// Move Forward
 		Vector3 forwardSpeed = transform.TransformDirection(Vector3.forward * Time.deltaTime * speed);
@@ -109,16 +109,16 @@ public class FlyThroughController : MonoBehaviour {
 		
 		if (speed == 0.0f)
 		{
-			nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_IDLE;
+			//nowFlyingState = QueryAnimationController.QueryChanAnimationType.FLY_IDLE;
 		}
 		
 		// ChangeAnimation
-		if (previousFlyingState != nowFlyingState)
-		{
-			QueryObject.GetComponent<QueryAnimationController>().ChangeAnimation(nowFlyingState);
-		}
+		//if (previousFlyingState != nowFlyingState)
+		//{
+		//	QueryObject.GetComponent<QueryAnimationController>().ChangeAnimation(nowFlyingState);
+		//}
 		
-		previousFlyingState = nowFlyingState;
+		//previousFlyingState = nowFlyingState;
 		
 	}
 	
