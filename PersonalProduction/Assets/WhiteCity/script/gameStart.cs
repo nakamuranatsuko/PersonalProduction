@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class startButton : MonoBehaviour
+public class gameStart : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Explanation");
+        SceneManager.LoadScene("game");
     }
 }

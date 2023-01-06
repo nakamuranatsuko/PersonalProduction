@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 public class AnimatedDialog : MonoBehaviour
 {
     // アニメーター
     [SerializeField] private Animator _animator;
+
     // アニメーターコントローラーのレイヤー(通常は0)
     [SerializeField] private int _layer;
 
@@ -33,6 +35,19 @@ public class AnimatedDialog : MonoBehaviour
 
         // アニメーション待機
         StartCoroutine(WaitAnimation("Shown"));
+    }
+
+    // ダイアログを閉じる
+    public void Close()
+    {
+        // 不正操作防止
+        if (!IsOpen || IsTransition) return;
+
+        // IsOpenフラグをクリア
+        _animator.SetBool(ParamIsOpen, false);
+
+        // アニメーション待機し、終わったらパネル自体を非アクティブにする
+        StartCoroutine(WaitAnimation("Hidden", () => gameObject.SetActive(false)));
     }
 
     // 開閉アニメーションの待機コルーチン
