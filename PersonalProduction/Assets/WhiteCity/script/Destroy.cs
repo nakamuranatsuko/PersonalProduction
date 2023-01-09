@@ -11,7 +11,8 @@ public class Destroy : MonoBehaviour
 		{
 			//è¡Ç¶ÇÈ
 			Destroy(hit.gameObject, 0.0f);
-			score.scoreNum += 1;
+			score.scoreNum++;
+			RandomPosition.countBall++;
 		}
 	}
 }

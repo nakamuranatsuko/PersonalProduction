@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/WhiteCity/Scenes/Explanation.unity
     guid: 1c49a25be8f841f4ab23e598569ad371
+  - enabled: 1
+    path: Assets/WhiteCity/Scenes/result.unity
+    guid: 4132376914f2f81428cce96c5aac622e
+  - enabled: 1
+    path: Assets/WhiteCity/Scenes/Ranking.unity
+    guid: 49979c903338f7348a61a8c37cd861bb
   m_configObjects: {}
