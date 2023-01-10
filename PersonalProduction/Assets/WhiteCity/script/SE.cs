@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
 
-public class startButton : MonoBehaviour
+public class SE : MonoBehaviour
 {
     public AudioClip sound1;
     AudioSource audioSource;
@@ -15,9 +12,8 @@ public class startButton : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void OnClickStartButton()
+    public void OnClickSEButton()
     {
         audioSource.PlayOneShot(sound1);
-        SceneManager.LoadScene("Explanation");
     }
 }

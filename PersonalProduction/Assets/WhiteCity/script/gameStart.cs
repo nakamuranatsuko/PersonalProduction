@@ -9,15 +9,19 @@ public class gameStart : MonoBehaviour
 {
 
     public TextMeshProUGUI numText;
+    public AudioClip sound1;
+    AudioSource audioSource;
 
     void Start()
     {
         numText.text = "";
         GetComponent<Button>().interactable = true;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void OnClickStartButton()
     {
+        audioSource.PlayOneShot(sound1);
         GetComponent<Button>().interactable = false;
         StartCoroutine(CountdownCoroutine());
     }

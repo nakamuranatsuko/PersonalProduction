@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class AnimatedDialog : MonoBehaviour
 {
+
     // アニメーター
     [SerializeField] private Animator _animator;
 
@@ -21,9 +22,11 @@ public class AnimatedDialog : MonoBehaviour
     // アニメーション中かどうか
     public bool IsTransition { get; private set; }
 
+
     // ダイアログを開く
     public void Open()
     {
+
         // 不正操作防止
         if (IsOpen || IsTransition) return;
 
@@ -40,6 +43,7 @@ public class AnimatedDialog : MonoBehaviour
     // ダイアログを閉じる
     public void Close()
     {
+
         // 不正操作防止
         if (!IsOpen || IsTransition) return;
 
