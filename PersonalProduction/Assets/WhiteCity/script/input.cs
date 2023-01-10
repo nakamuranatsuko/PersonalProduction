@@ -9,7 +9,7 @@ public class input : MonoBehaviour
     //オブジェクトと結びつける
     public TMP_InputField inputField;
     public TextMeshProUGUI text;
-    public static string name;
+    public static string name_i;
 
     void Start()
     {
@@ -17,14 +17,14 @@ public class input : MonoBehaviour
         text = text.GetComponent<TextMeshProUGUI>();
         inputField = GetComponent<TMP_InputField>();
         InitInputField();
-        name = "";
+        name_i = "";
     }
 
     public void InputText()
     {
         //テキストにinputFieldの内容を反映
         text.text = inputField.text;
-        name = text.text;
+        name_i = text.text;
 
     }
 

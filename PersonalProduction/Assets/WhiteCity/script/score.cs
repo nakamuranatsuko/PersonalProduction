@@ -22,7 +22,7 @@ public class score : MonoBehaviour
     {
         scoretext.text = "Šl“¾ƒ{[ƒ‹”:" + scoreNum.ToString();
 
-        if (scoreNum == 10)
+        if (scoreNum == 30)
         {
             StartCoroutine(display());
         }

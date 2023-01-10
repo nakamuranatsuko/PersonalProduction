@@ -41,6 +41,6 @@ public class TimeCount : MonoBehaviour
             oldSeconds = seconds;
         }
 
-        if (score.scoreNum == 10) flg = false;
+        if (score.scoreNum == 30) flg = false;
     }
 }
